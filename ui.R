@@ -1,7 +1,12 @@
 
 library(ggplot2)
 library(shiny)
-iris4 <- iris[,1:4]
+library(shiny)
+library(ggplot2)
+library(dplyr)
+
+
+
 # Define UI for application that draws a histogram
 shinyUI(fluidPage(
 
@@ -11,9 +16,9 @@ shinyUI(fluidPage(
     sidebarLayout(
         sidebarPanel(
           h4("Elija las variables de segmentación x"),
-          varSelectInput("xvar", "Eje X", iris4),
+          varSelectInput("xvar", "Eje X", iris[,1:4]),
           h4("Elija las variables de segmentación y"),
-          varSelectInput("yvar", "Eje Y", iris4)
+          varSelectInput("yvar", "Eje Y", iris[,1:4])
           ,
           h3("Elija el número de clúster")
           ,
@@ -32,6 +37,7 @@ shinyUI(fluidPage(
         )
     )
 ))
+
 
 
 
