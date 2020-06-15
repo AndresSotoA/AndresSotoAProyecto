@@ -7,7 +7,7 @@ library(dplyr)
 
 
 
-# Define UI for application that draws a histogram
+# Definiendo UI para la aplicación que grafica un gráfico de dispersión con Kmeans.
 shinyUI(fluidPage(
 
     
